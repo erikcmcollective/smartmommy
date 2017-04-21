@@ -1,5 +1,5 @@
 <?php
-echo "hallo jan";
+echo "hallo erik";
 
 /**
  * The Front Controller for handling every request
