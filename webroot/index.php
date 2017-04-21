@@ -1,4 +1,6 @@
 <?php
+echo "hallo jan";
+
 /**
  * The Front Controller for handling every request
  *
