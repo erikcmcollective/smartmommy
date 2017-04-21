@@ -81,14 +81,6 @@ class ArticlesTable extends Table
             ->requirePresence('category', 'create')
             ->notEmpty('category');
 
-        $validator
-            ->requirePresence('featured', 'create')
-            ->notEmpty('featured');
-
-        $validator
-            ->requirePresence('media', 'create')
-            ->notEmpty('media');
-
         return $validator;
     }
 }

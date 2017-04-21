@@ -37,6 +37,17 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        
+         $this->addBehavior('Josegonzalez/Upload.Upload', [
+            // You can configure as many upload fields as possible,
+            // where the pattern is `field` => `config`
+            //
+            // Keep in mind that while this plugin does not have any limits in terms of
+            // number of files uploaded per request, you should keep this down in order
+            // to decrease the ability of your users to block other requests.
+            'photo' => []
+        ]);
+        
     }
 
     /**
@@ -57,8 +68,8 @@ class UsersTable extends Table
             ->notEmpty('email');
 
         $validator
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+             ->requirePresence('password', 'create')
+             ->notEmpty('password');
 
         return $validator;
     }

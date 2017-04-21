@@ -16,10 +16,10 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('body') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('category') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('featured') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('media') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('body') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image_dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
