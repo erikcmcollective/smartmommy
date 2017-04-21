@@ -34,45 +34,61 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+        <!--Import Fontawesome fonts-->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!--Import smartmommy.css-->
+        <link type="text/css" rel="stylesheet" href="css/smartmommy.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
     <body>
         <div class="container">
+            <div class="row" style="padding-top: 10px;">
+                <div class="col s12 m4">
+                    <img class="responsive-img" src="../../../webroot/img/logo-klein2.png">
+                </div>
+                <div class="col s12 m8">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- SM2 top banner -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-9427996168948323"
+                             data-ad-slot="4161807427"
+                             data-ad-format="auto"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                </div>
+            </div>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Logo</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                        <li><a href="collapsible.html">Javascript</a></li>
-                        <li><a href="mobile.html">Mobile</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categorieen</a></li>
+                        <li><a href=#">Contact</a></li>
                     </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                        <li><a href="collapsible.html">Javascript</a></li>
-                        <li><a href="mobile.html">Mobile</a></li>
-                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="img/featured1.jpg"/>
+                            <a href="#"><img src="img/featured1.jpg"/></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>Een paar super schattige IKEA hacks voor je kinderen</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="red-text material-icons">favorite_border</i>
+                            <i class="blue-text material-icons">share</i>
+                            <button onclick="fbshare()">Click me</button>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4"><div class="card small">
+                <div class="col s12 m4">
+                    <div class="card small">
                         <div class="card-image">
                             <img src="img/featured2.jpg"/>
                         </div>
@@ -80,10 +96,33 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="red-text material-icons">favorite</i>
+                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"><i class="right blue-text fa fa-facebook-square fa-2x"></i></a>
                         </div>
-                    </div></div>
-                <div class="col s12 m4"><div class="card small">
+                    </div>
+                    <script>
+                    function fbshare(ccount) {
+
+        nametxt = sprintf('I just scored %s out of 10', ccount);
+
+        if (ccount === 0) {
+            nametxt = 'Smart Mommy';
+        }
+
+        FB.ui({
+            method: 'feed',
+            name: nametxt,
+            link: "http://smartmommy.nl",
+            picture: "http://dev.smartmommy.nl/img/featured1.jpg",
+            caption: "Een paar super schattige IKEA hacks voor je kinderen",
+            description: 'Smart Mommy'
+
+        });
+    }
+    </script>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card small">
                         <div class="card-image">
                             <img src="img/featured3.jpg"/>
                         </div>
@@ -91,7 +130,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="red-text material-icons">favorite_border</i>
+                            <i class="blue-text material-icons">share</i>
                         </div>
                     </div></div>
             </div>
@@ -105,11 +145,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="blue-text text-darken-3 fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                            <i class="right blue-text text-darken-3 fa fa-share fa-2x" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <div class="col s12 m4">
+                    <div class="card small">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- SM test -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -118,7 +161,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div>
+</script></div></div>
                 <div class="col s12 m4"><div class="card small">
                         <div class="card-image">
                             <img src="img/featured6.jpg"/>
@@ -127,7 +170,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="blue-text text-darken-3 fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                            <i class="right blue-text text-darken-3 fa fa-share fa-2x" aria-hidden="true"></i>
                         </div>
                     </div></div>
             </div>
@@ -141,7 +185,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="blue-text text-darken-3 fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                            <i class="right blue-text text-darken-3 fa fa-share fa-2x" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -153,7 +198,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="blue-text text-darken-3 fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                            <i class="right blue-text text-darken-3 fa fa-share fa-2x" aria-hidden="true"></i>
                         </div>
                     </div></div>
                 <div class="col s12 m4"><div class="card small">
@@ -164,7 +210,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
-                            <i class="material-icons">thumb_up</i>
+                            <i class="blue-text text-darken-3 fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                            <i class="right blue-text text-darken-3 fa fa-share fa-2x" aria-hidden="true"></i>
                         </div>
                     </div></div>
             </div>
@@ -189,7 +236,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            Made with <i class="white-text  fa fa-heart" aria-hidden="true"></i> by Trivada
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
