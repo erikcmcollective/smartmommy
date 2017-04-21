@@ -10,17 +10,17 @@
     </ul>
 </nav>
 <div class="articles form large-9 medium-8 columns content">
-    <?= $this->Form->create($article) ?>
+    <?php echo $this->Form->create('Article', ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Add Article') ?></legend>
         <?php
+         
             echo $this->Form->control('title');
-//            echo $this->Form->control('body');
-//            echo $this->Form->control('category');
-//            echo $this->Form->control('featured');
-//            echo $this->Form->create('Article', ['type' => 'file']);
-//            echo $this->Form->input('Article.image', ['type' => 'file']);
-//            echo $this->Form->input('Article.image_dir', ['type' => 'hidden']);
+            echo $this->Form->control('category');
+            echo $this->Form->control('body');
+            echo $this->Form->input('image', ['type' => 'file']);
+            echo $this->Form->input('image_dir', ['type' => 'hidden', 'value' => 'upload']);
+            
             
         ?>
     </fieldset>

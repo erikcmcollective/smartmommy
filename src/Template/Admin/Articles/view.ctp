@@ -20,12 +20,12 @@
             <td><?= h($article->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Body') ?></th>
-            <td><?= h($article->body) ?></td>
+            <th scope="row"><?= __('Category') ?></th>
+            <td><?= h($article->category) ?></td> 
         </tr>
         <tr>
-            <th scope="row"><?= __('Category') ?></th>
-            <td><?= h($article->category) ?></td>
+            <th scope="row"><?= __('Body') ?></th>
+            <td><?= h($article->body) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Featured') ?></th>
