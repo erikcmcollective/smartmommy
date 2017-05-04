@@ -46,16 +46,22 @@ class ArticlesTable extends Table
             // number of files uploaded per request, you should keep this down in order
             // to decrease the ability of your users to block other requests.
             'image' => [
-                 'fields' => [
+                'filesystem' => [
+                    'root' => ROOT . DS . 'webroot' . DS  
+                    ],
+                'fields' => [
                     // if these fields or their defaults exist
                     // the values will be set.
                     'dir' => 'image_dir', // defaults to `dir`
                     'size' => 'image_size', // defaults to `size`
                     'type' => 'image_type', // defaults to `type`
-                ],
+                    ],
+                'path' => '{DS}files{DS}{model}{DS}{field}{DS}',
             ],
         ]);
-    }
+          
+          
+          }
 
     /**
      * Default validation rules.
