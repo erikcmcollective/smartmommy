@@ -12,7 +12,7 @@
 <div class="articles form large-9 medium-8 columns content">
     <?php echo $this->Form->create('Article', ['type' => 'file']); ?>
     <fieldset>
-        <legend><?= __('Add Article') ?></legend>
+        <legend><?= __('Add Articless') ?></legend>
         <?php
          
             echo $this->Form->control('title');
