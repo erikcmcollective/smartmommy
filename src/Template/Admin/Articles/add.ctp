@@ -16,7 +16,7 @@
         <?php
          
             echo $this->Form->control('title');
-            echo $this->Form->control('category');
+            echo $this->Form->select('category_id', $categories);
             echo $this->Form->control('body');
             echo $this->Form->input('image', ['type' => 'file']);
             echo $this->Form->input('image_dir', ['type' => 'hidden', 'value' => 'upload']);

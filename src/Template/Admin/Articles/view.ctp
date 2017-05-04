@@ -24,8 +24,8 @@
             <td><?= h($article->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Category') ?></th>
-            <td><?= h($article->category) ?></td> 
+            <th scope="row"><?= __('Category_id') ?></th>
+            <td><?= h($article->category_id) ?></td> 
         </tr>
         <tr>
             <th scope="row"><?= __('Image') ?></th>

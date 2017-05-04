@@ -68,6 +68,9 @@ class ArticlesController extends AppController
         }
         $this->set(compact('article'));
         $this->set('_serialize', ['article']);
+        
+       $categories = $this->Articles->Categories->find("list");//drop down menu maken in add.ctp van articles
+        $this->set(compact('categories')); // pass result dataset to the view
     }
  
     /**
