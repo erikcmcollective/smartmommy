@@ -31,7 +31,7 @@ class ArticlesTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-
+        $this->belongsTo('categories');
         $this->setTable('articles');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
@@ -84,8 +84,8 @@ class ArticlesTable extends Table
             ->notEmpty('body');
 
         $validator
-            ->requirePresence('category', 'create')
-            ->notEmpty('category');
+            ->requirePresence('category_id', 'create')
+            ->notEmpty('category_id');
 
         return $validator;
     }

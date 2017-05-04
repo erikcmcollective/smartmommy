@@ -25,7 +25,7 @@
             <?php foreach ($categories as $category): ?>
             <tr>
                 <td><?= $this->Number->format($category->id) ?></td>
-                <td><?= h($category->category) ?></td>
+                <td><?= h($category->title) ?></td>
                 <td><?= h($category->created) ?></td>
                 <td><?= h($category->modified) ?></td>
                 <td class="actions">

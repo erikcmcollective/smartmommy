@@ -17,7 +17,7 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Category') ?></th>
-            <td><?= h($category->category) ?></td>
+            <td><?= h($category->title) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
