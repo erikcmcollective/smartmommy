@@ -32,8 +32,8 @@
                 <td><?= h($article->title) ?></td>
                 <td><?= h($article->body) ?></td>
                 <td><?= h($article->category) ?></td>
-                <td><?= h($article->featured) ?></td>
-                <td><?= h($article->media) ?></td>
+                <td><?= h($article->image) ?></td>
+                <td><?= h($article->image_dir) ?></td>
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td class="actions">
