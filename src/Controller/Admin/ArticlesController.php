@@ -2,8 +2,8 @@
 namespace App\Controller;
 namespace App\Controller\Admin;
 use App\Controller\AppController;
-
-
+ 
+ 
 /**
  * Articles Controller
  *
@@ -11,7 +11,7 @@ use App\Controller\AppController;
  */
 class ArticlesController extends AppController
 {
-
+ 
     /**
      * Index method
      *
@@ -20,11 +20,11 @@ class ArticlesController extends AppController
     public function index()
     {
         $articles = $this->paginate($this->Articles);
-
+ 
         $this->set(compact('articles'));
         $this->set('_serialize', ['articles']);
     }
-
+ 
     /**
      * View method
      *
@@ -37,11 +37,11 @@ class ArticlesController extends AppController
         $article = $this->Articles->get($id, [
             'contain' => []
         ]);
-
+ 
         $this->set('article', $article);
         $this->set('_serialize', ['article']);
     }
-
+ 
     /**
      * Add method
      *
@@ -51,18 +51,28 @@ class ArticlesController extends AppController
     {
         $article = $this->Articles->newEntity();
         if ($this->request->is('post')) {
-            $article = $this->Articles->patchEntity($article, $this->request->getData());
+            
+             $article = $this->Articles->patchEntity($article, $this->request->getData());
+             pr($article);
+             //pr($this->request->getData());
+            
             if ($this->Articles->save($article)) {
+               
                 $this->Flash->success(__('The article has been saved.'));
-
+               
+               
+ 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }
         $this->set(compact('article'));
         $this->set('_serialize', ['article']);
+        
+       $categories = $this->Articles->Categories->find("list");//drop down menu maken in add.ctp van articles
+        $this->set(compact('categories')); // pass result dataset to the view
     }
-
+ 
     /**
      * Edit method
      *
@@ -79,7 +89,7 @@ class ArticlesController extends AppController
             $article = $this->Articles->patchEntity($article, $this->request->getData());
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
-
+ 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
@@ -87,7 +97,7 @@ class ArticlesController extends AppController
         $this->set(compact('article'));
         $this->set('_serialize', ['article']);
     }
-
+ 
     /**
      * Delete method
      *
@@ -104,16 +114,16 @@ class ArticlesController extends AppController
         } else {
             $this->Flash->error(__('The article could not be deleted. Please, try again.'));
         }
-
+ 
         return $this->redirect(['action' => 'index']);
     }
    
-
-
-
-
-
-    
+ 
+ 
+ 
+ 
+   
 }
-
-
+ 
+ 
+ 

@@ -31,7 +31,7 @@ class ArticlesTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-
+        $this->belongsTo('categories');
         $this->setTable('articles');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
@@ -46,16 +46,22 @@ class ArticlesTable extends Table
             // number of files uploaded per request, you should keep this down in order
             // to decrease the ability of your users to block other requests.
             'image' => [
-                 'fields' => [
+                'filesystem' => [
+                    'root' => ROOT . DS . 'webroot' . DS  
+                    ],
+                'fields' => [
                     // if these fields or their defaults exist
                     // the values will be set.
                     'dir' => 'image_dir', // defaults to `dir`
                     'size' => 'image_size', // defaults to `size`
                     'type' => 'image_type', // defaults to `type`
-                ],
+                    ],
+                'path' => '{DS}files{DS}{model}{DS}{field}{DS}',
             ],
         ]);
-    }
+          
+          
+          }
 
     /**
      * Default validation rules.
@@ -78,16 +84,8 @@ class ArticlesTable extends Table
             ->notEmpty('body');
 
         $validator
-            ->requirePresence('category', 'create')
-            ->notEmpty('category');
-
-        $validator
-            ->requirePresence('featured', 'create')
-            ->notEmpty('featured');
-
-        $validator
-            ->requirePresence('media', 'create')
-            ->notEmpty('media');
+            ->requirePresence('category_id', 'create')
+            ->notEmpty('category_id');
 
         return $validator;
     }

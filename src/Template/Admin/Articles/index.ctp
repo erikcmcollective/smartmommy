@@ -17,9 +17,9 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('body') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('category') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('featured') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('media') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('category_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('image_dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -31,9 +31,9 @@
                 <td><?= $this->Number->format($article->id) ?></td>
                 <td><?= h($article->title) ?></td>
                 <td><?= h($article->body) ?></td>
-                <td><?= h($article->category) ?></td>
-                <td><?= h($article->featured) ?></td>
-                <td><?= h($article->media) ?></td>
+                <td><?= h($article->category_id) ?></td>
+                <td><?= h($article->image) ?></td>
+                <td><?= h($article->image_dir) ?></td>
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td class="actions">

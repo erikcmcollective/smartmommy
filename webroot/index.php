@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The Front Controller for handling every request
  *
@@ -26,6 +25,7 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 require dirname(__DIR__) . '/vendor/autoload.php';
+
 
 use App\Application;
 use Cake\Http\Server;
