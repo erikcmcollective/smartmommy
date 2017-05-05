@@ -74,13 +74,16 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 </div>
             </nav>
             <div class="row">
+                <?php foreach($articles as $article) { ?>
                 <div class="col s12 m4">
                     <div class="card small">
                         <div class="card-image">
-                            <a href="#"><img src="img/featured1.jpg"/></a>
+                            <a href="#"><img src="<?php echo  'files/Articles/image/'.$article->image ?>"/></a>
                         </div>
+                        
+                        
                         <div class="card-content">
-                            <p>Een paar super schattige IKEA hacks voor je kinderen</p>
+                            <p><?= $article->title ?></p>
                         </div>
                         <div class="card-action">
                             <i class="red-text material-icons">favorite_border</i>
@@ -89,6 +92,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         </div>
                     </div>
                 </div>
+                <?php } ?>
                 <div class="col s12 m4">
                     <div class="card small">
                         <div class="card-image">
@@ -101,7 +105,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                             <i class="red-text material-icons">favorite</i>
                             <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"><i class="right blue-text fa fa-facebook-square fa-2x"></i></a>
                         </div>
-                    </div>
+                    </div> 
                     <script>
                     function fbshare(ccount) {
 
@@ -256,5 +260,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=698097693641586";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+            
+   
+
+            
+            
     </body>
 </html>
