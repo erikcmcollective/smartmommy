@@ -45,36 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
     <body>
     <div class="container">
-        <header>
-            <div class="row" style="padding-top: 10px;">
-                <div class="col s12 m4">
-                    <img class="responsive-img" src="../../../webroot/img/logo-klein2.png">
-                </div>
-                <div class="col s12 m8">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- SM2 top banner -->
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-9427996168948323"
-                             data-ad-slot="4161807427"
-                             data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                </div>
-            </div>
-            <nav>
-                <div class="nav-wrapper">
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Categorieen</a></li>
-                        <li><a href=#">Contact</a></li>
-                    </ul>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                </div>
-            </nav>  
-        </header>
+<?php echo $this->element('menu'); ?>
 
 <!--begin artikel-->
 <main>
@@ -94,31 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <!--einde artikel-->
     </div>
 <!--begin footer-->
-<footer class="page-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-    Made with <i class="white-text  fa fa-heart" aria-hidden="true"></i> by Trivada
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-    </div>
-  </div>
-</footer>
+<?php echo $this->element('footer'); ?>
 <!--einde footer-->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

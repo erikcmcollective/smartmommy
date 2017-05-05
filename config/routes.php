@@ -50,6 +50,9 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    Router::connect('/articles/*', ['controller' => 'Articles', 'action' => 'view']);
+   
+   
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
@@ -74,6 +77,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
+
+
 
 /**
  * Load all plugin routes.  See the Plugin documentation on

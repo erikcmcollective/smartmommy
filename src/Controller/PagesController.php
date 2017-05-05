@@ -74,17 +74,13 @@ class PagesController extends AppController
         }
     }
     
-    
-    public function home()
-        {
-$this->loadModel('Articles');
-        
-         $articles = $this->paginate($this->Articles);
-
-         debug($articles);
-        
-      $this->set(compact('articles'));
-        $this->set('_serialize', ['articles']);
-    }
+//    public function home()
+//        {
+//            $this->loadModel('Articles');
+//            $articles = $this->paginate($this->Articles);
+//            debug($articles);
+//            $this->set(compact('articles'));
+//            $this->set('_serialize', ['articles']);
+//        }
 }
 

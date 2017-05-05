@@ -29,7 +29,7 @@
             <?php foreach ($articles as $article): ?>
             <tr>
                 <td><?= $this->Number->format($article->id) ?></td>
-                <td><?= h($article->title) ?></td>
+                <td><?= $this->Html->link($article->title, ['action' => 'view', $article->id]) ?></td>
                 <td><?= h($article->body) ?></td>
                 <td><?= h($article->category_id) ?></td>
                 <td><?= h($article->image) ?></td>
@@ -45,6 +45,9 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+   
+
+    
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->first('<< ' . __('first')) ?>

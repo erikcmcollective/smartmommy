@@ -17,13 +17,13 @@ class ArticlesController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
-//    public function index()
-//    {
-//        $articles = $this->paginate($this->Articles);
-// 
-//        $this->set(compact('articles'));
-//        $this->set('_serialize', ['articles']);
-//    }
+    public function index()
+    {   
+        $articles = $this->paginate($this->Articles);
+        $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
+        
+    }
  
     /**
      * View method
