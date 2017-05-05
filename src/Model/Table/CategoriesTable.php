@@ -1,17 +1,3 @@
-<<<<<<< Upstream, based on origin/master
-<?php
-
-// src/Model/Table/CategoriesTable.php
-namespace App\Model\Table;
-use Cake\ORM\Table;
-class CategoriesTable extends Table
-{
-public function initialize(array $config)
-{
-$this->addBehavior('Timestamp');
-}
-}
-=======
 <?php
 namespace App\Model\Table;
 
@@ -72,4 +58,3 @@ class CategoriesTable extends Table
         return $validator;
     }
 }
->>>>>>> 50e91ce categories toegevoegd en werkt

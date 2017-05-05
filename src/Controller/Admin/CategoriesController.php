@@ -1,18 +1,3 @@
-<<<<<<< Upstream, based on origin/master
-<?php
-
-// src/Controller/CategoriesController.php
-namespace App\Controller;
-class CategoriesController extends AppController
-{
-    
-    public function index()
-{
-$categories = $this->Categories->find('all');
-$this->set(compact('categories'));
-}
-}
-=======
 <?php
 namespace App\Controller\Admin;
 
@@ -122,4 +107,3 @@ class CategoriesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 }
->>>>>>> 50e91ce categories toegevoegd en werkt
