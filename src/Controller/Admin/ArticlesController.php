@@ -17,13 +17,13 @@ class ArticlesController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
-        $articles = $this->paginate($this->Articles);
- 
-        $this->set(compact('articles'));
-        $this->set('_serialize', ['articles']);
-    }
+//    public function index()
+//    {
+//        $articles = $this->paginate($this->Articles);
+// 
+//        $this->set(compact('articles'));
+//        $this->set('_serialize', ['articles']);
+//    }
  
     /**
      * View method
@@ -118,10 +118,14 @@ class ArticlesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
    
- 
- 
- 
- 
+    public function articlesDisplay()
+    {
+        $this->viewBuilder()->layout('');
+        $articles = $this->paginate($this->Articles);
+        $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
+    }
+
    
 }
  

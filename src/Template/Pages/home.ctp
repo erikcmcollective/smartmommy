@@ -138,7 +138,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <div class="card-action">
                             <i class="red-text material-icons">favorite_border</i>
                             <i class="blue-text material-icons">share</i>
-                        </div>
+                        </div> 
                     </div></div>
             </div>
             <div class="row">
