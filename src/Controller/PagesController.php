@@ -40,6 +40,13 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
+        //display data on home screen
+        $this->loadModel('Articles');
+        $articles = $this->Articles->find('all')->toArray();
+        $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
+        
+        
         $count = count($path);
         if (!$count) {
             return $this->redirect('/');
@@ -66,4 +73,18 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    
+    
+    public function home()
+        {
+$this->loadModel('Articles');
+        
+         $articles = $this->paginate($this->Articles);
+
+         debug($articles);
+        
+      $this->set(compact('articles'));
+        $this->set('_serialize', ['articles']);
+    }
 }
+
